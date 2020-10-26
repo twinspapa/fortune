@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>무료운세</title>
+	<link href="css/stock_letter.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="wrap" class="luck">
+		<div class="header">
+			<h2 class="wrap">
+				<a href="javascript:void(0);" class="prevBtn" role="button">
+					<img src="img/arrow_back.svg" alt="이전">
+				</a>
+				<span class="title">무료운세</span>
+			</h2>
+		</div>
+		<div class="fix_wrap style01">
+			<div class="container_wrap">
+                <div class="head_group">
+    				<p class="img_logo"><img src="img/img_outLink.png" alt=""></p>
+    				<h1 class="tit_message">
+    					<strong class="strong">무료운세 알림 서비스를<br>해지 하시겠습니까?</strong>
+    				</h1>
+    			</div>
+                <div class="cnt_message">
+                    <p class="fc_red">
+                        본 서비스를 해지하실 경우,<br>
+                        더 이상 무료운세 및 알림 서비스를<br>
+                        제공해 드리지 않습니다.<br><br>
+                    </p>
+                    <p>
+                        (주)몬스터큐브 1522-9746
+                    </p>
+                </div>
+                <!-- 인증 -->
+                <div class="sms_wrap">
+                    <div class="input_form" id="payForm">
+                        <div class="cert_ing">
+                            <!-- 인증 진행중일 때 노출 -->
+                            <!-- 휴대폰번호 -->
+                            <div class="if_wrap">
+                                <label for="fi_in_phone">휴대폰번호</label>
+                                <input type="number" inputmode="numeric" pattern="[0-9]*" class="ui_auth_input" id="fi_in_phone" autocomplete="off" value="" maxlength="11" placeholder="상대방 휴대폰번호 입력">
+                            </div>
+                            <!-- 인증번호 : 인증번호 발송하기 클릭되면 노출 -->
+                            <div class="cert_wrap" id="authForm">
+                                <div class="if_wrap cert"> <!-- 20200805 인증번호일치시 : same, 불일치시 : nosame -->
+                                    <input type="hidden" id="doneAuth" value="" data-required="true">
+                                    <!-- 폰인증이 끝나면 Y를 넣어주시고 $('#payForm').vcBeautifyForm('validate'); 를 실행해주시면 버튼이 활성화됩니다. -->
+                                    <input type="number" inputmode="numeric" pattern="[0-9]*" id="fi_in_cert" value="" maxlength="4" placeholder="인증번호 입력" title="인증번호 입력">
+                                </div>
+                                <!-- 기존 남은시간 -->
+                                <!-- <span class="time"><span class="hide">남은시간</span> <span id="authTimer">100분</span></span> -->
+                                <!-- 20200805 일치시 -->
+                                <span class="time"><span class="hide">인증번호 확인</span> <span id="same">일치</span></span>
+                                <p class="r_time" id="sameMsg">인증이 완료되었습니다.</p>
+                                <!-- 20200805 불일치시 -->
+                                <!-- <span class="time" ><span class="hide">인증번호 확인</span> <span id="noSame">불일치</span></span> -->
+                                <p class="r_time" id="nosameMsg">전송된 인증번호의 유효 시간은 <span id="authTimer">3분</span> 입니다.</p>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="btn_wrap cer">
+                            <button type="button" class="btn_comm impor" id="btnSendAuthNum" disabled="disabled">인증요청</button>
+                            <!-- 휴대폰번호 입력하면 활성화되며 인증번호 발송하기 클릭되면 비 노출 -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //인증  -->
+                <div class="btns_area">
+                    <button type="button" class="btn_comm em" id="btnAccept" disabled="disabled">무료 운세 해지하기</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- layer popup, U-24400_A-03 -->
+    	<div id="lay_wrap" class="lay_message lay_message_type2 U-24400_A-03">
+    		<div class="lay_content">
+    			<div class="head_group">
+    				<h1 class="tit_message">
+    					<strong class="strong">안내</strong>
+    				</h1>
+    			</div>
+    			<div class="cnt_message">
+    				<div class="mt15">
+    					<p>해지가 완료되었습니다.</p>
+    				</div>
+    			</div>
+    		</div>
+    		<footer class="lay_footer">
+    			<button type="button" class="fl_r ui_modal_never_show" onclick="signOut();">확인</button>
+    		</footer>
+    	</div>
+
+        <div class="bottom_conts">
+            <h3 class="tit_note">유의사항</h3>
+            <ul class="list_bl_desc">
+                <li>서비스 해지시 무료운세 알림 서비스는 제공되지 않습니다.</li>
+                <li>서비스 이용문의 및 해지안내는 ㈜몬스터큐브 고객센터 1522-9746 을 통해 가능합니다.</li>
+        </div>
+	</div>
+
+    <script src="js/jquery.min.js"></script>
+	<script src="js/vcui.js"></script>
+	<script src="js/vcui.common-ui.js"></script>
+	<script src="js/site.js"></script>
+	<script>
+        // 모달창 제어
+        function modal_close(el) { $(el).vcModal('close'); } // 닫아준다.
+        function modal_open(el) { $(el).vcModal('open'); } // 모달생성
+
+        // 서비스 해지신청 스크립트
+        function signOut() {
+            // U-20000(빌레터 MY자산 화면) 페이지로 이동 되어야 합니다.
+            modal_close('.U-24400_A-03');
+        }
+
+        $(function () {
+            vcui.require([
+                'ui/checkboxAllChecker',
+                'ui/beautifyForm'
+            ], function () {
+                // 휴대폰 번호 입력체크
+                $('#payForm').vcBeautifyForm();
+            });
+
+            //모달창 푸터 버튼영역이 있을경우 class 추가
+            $("#lay_wrap").children('.lay_footer').parents('#lay_wrap').addClass('lay_hasFoot');
+
+            // 휴대폰번호 입력 유효성체크 완료시 인증번호 발송버튼 활성화
+            $('#payForm').on('input focusout keyup', '.ui_auth_input', function () {
+                var mobile = $('#fi_in_phone').val(),
+                    rgEx = /^(01[016789]{1}[1-9]{1}[0-9]{2,3})[0-9]{4}$/,
+                    chkFlg = rgEx.test(mobile);
+
+                if(chkFlg) {
+                    $('#btnSendAuthNum').prop('disabled',false);
+                }
+            });
+
+
+            // 인증번호 발송버튼 클릭
+            $('#btnSendAuthNum').on('click', function () {
+                $('#nosameMsg').show();
+                if (timeStatus == '') {
+                    timeStart();
+                } else {
+                    timeReset();
+                }
+                $('#sameMsg').hide();
+                $('.time').hide();
+                $('#authForm').show(); // 인증번호 입력란 표시
+                $(this).text('재전송');
+                $(this).prop('disabled', true);
+                setTimeout(function(){
+                    $('#btnSendAuthNum').prop('disabled', false);
+                },3000);
+                // 인증번호 발송전 SKT 회원인지 확인하는 유효성 검사 필요
+                if (true) {
+                    alert('인증번호가 발송되었습니다.');
+                } else {
+                    alert('무료운세 서비스는 SKT회원만 이용가능한 서비스 입니다.');
+                }
+            });
+
+
+            // 인증번호 입력완료 유효성 체크
+            $('#fi_in_cert').on('input', function () {
+                if ($('#fi_in_cert').val().length == 4) { //인증번호 4자리 입력완료시 유효성 체크
+                    if(true){ //SMS 인증 성공 시
+                        $('#doneAuth').val('Y');
+                        $('#payForm').css('pointer-events','none');
+                        $('#authForm .cert').addClass('on same');
+                        $('#authForm .cert').removeClass('nosame');
+                        $('#btnSendAuthNum').prop('disabled', true);
+                        $('.time').text('일치').show(); // 인증완료 문구 출력
+                        $('#sameMsg').show(); // 인증완료 문구 출력
+                        $('#nosameMsg').hide();
+                        $('#btnAccept').prop('disabled', false);
+                    } else { //인증 실패시
+                        $('#authForm .cert').addClass('on nosame');
+                        $('#authForm .cert').removeClass('same');
+                        $('.time').text('불일치').show();
+                    }
+                }
+            });
+
+            // 무료운세확인하기(서비스 신청)버튼 클릭
+            $('#btnAccept').on('click', function() {
+                // 서비스 해지 완료 프로세스 삽입
+                modal_open('.U-24400_A-03');
+            });
+        });
+
+            // 인증번호 유효 시간 타이머
+            var timeStatus = '',
+                time = 179,
+                min = '',
+                sec = '';
+
+            function timeStart() {
+                var x = setInterval(function() {
+                        var min = parseInt(time/60),
+                        sec = time%60;
+
+                        if (time < 0) {
+                        clearInterval(x);
+                        } else {
+                            $('#authTimer').html(min + '분' + sec +'초');
+                        }
+                    time--;
+                    timeStatus = 'ing';
+                }, 1000);
+            }
+
+            function timeReset() {
+                time = 179;
+            }
+	</script>
+</body>
+</html>

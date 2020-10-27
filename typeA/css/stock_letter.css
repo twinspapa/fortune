@@ -1086,18 +1086,24 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 }
 
 .spouse .box.gender label {
-    border: 1px solid #444;
     width: 49%;
+    background: #f3f3f3;
+}
+
+.spouse .box.gender label[for="female"] {
+    margin: 0;
+}
+.spouse .btn {
+    border: 1px solid #444;
+    width: 100%;
     margin-right: 2%;
-    font-size: 1.1em;
+    font-size: 1em !important;
     font-weight: 300;
     padding: 0.6em;
     text-align: center;
     color: #939292;
     border-radius: 0.2em;
     border-color: #444;
+    background: #444;
 }
-
-.spouse .box.gender label[for="female"] {
-    margin: 0;
-}
+* { -webkit-tap-highlight-color:rgba(0,0,0,0); }

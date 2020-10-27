@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
 /* 숫자 FONT */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
@@ -840,3 +840,61 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .fix_wrap.style01 .cnt_message {padding-bottom: 30px;}
 .fix_wrap.style01 .container_wrap{padding: 20px 16px;text-align: center;}
 .luck .input_form .if_wrap {text-align: left;}
+
+.boxAll * { box-sizing: border-box;}
+.center {text-align: center;}
+.w25 { width: 25%; }
+.w50 { width: 50%; }
+.w100 { width: 100%; }
+* { -webkit-tap-highlight-color:rgba(0,0,0,0); }
+
+.U-24100 { min-width: 320px; background: #f4f5f9;}
+.U-24100 .top {padding: 1.2em 1.5em;}
+.U-24100 .top .tit {font-size: 1.5em;font-weight: bold;color: #2f4e0d;}
+.U-24100 .top .txt {margin: 0.7em 0;font-size: 1.3em;font-weight: 300;color: #000;}
+.U-24100 .top .date {margin-bottom: 1.8em;font-weight: 300;color: #2f4e0d;}
+.U-24100 .top .card {padding: 1.8em;border-radius: 0.4em;background: #fff;box-shadow: 1.1px 4.9px 12.4px 0.7px rgba(18, 18, 18, 0.08);}
+.U-24100 .top .card > div > p:first-child {font-size: 4.8em;font-weight: 900;color: #2f4e0d;}
+.U-24100 .top .card > div > p:last-child {margin-top: 1em;font-weight: 300;color: #8d8d8d;}
+.U-24100 .top .card .num {border-right: 1px solid #636363;}
+.U-24100 .top .card .char > p:first-child {font-family: 'Noto Sans HK';}
+.U-24100 .mid {margin-bottom: 2.8em;padding: 0 1.5em;}
+.U-24100 .mid .tab .tit {margin-bottom: 1em;font-size: 1.5em;font-weight: bold;color: #000;}
+.U-24100 .mid nav a img {margin: auto 0;width: 40%;}
+.U-24100 .mid nav a span {margin: auto;font-weight: 300;}
+.U-24100 .mid nav a {flex: 1;margin-right: 0.6em;padding: 1.4em 0.8em;color: #000;background: #fff;border-radius: 0.4em;}
+.U-24100 .mid nav a:last-child {margin: 0;}
+.U-24100 .mid .tab {margin-bottom: 1.8em;}
+.U-24100 .mid .tab_item .lists {display: none;}
+.U-24100 .mid .tab_item .lists.on {display: block;}
+.U-24100 .mid .tab_item .lists .item .menu {position: relative;margin: 0.4em 0;padding: 1.2em;font-size: 1.3em;font-weight: 300;color: #000;background: #fff;border-radius: 0.4em;}
+.U-24100 .mid .tab_item .lists .item .box {padding: 0 1.2em;font-size: 1.3em;background: #fff;border-radius: 0.4em;max-height: 0;overflow: hidden;transition: max-height 1s ease-out;}
+.U-24100 .mid .tab_item .lists .item .box .tit {margin: 0.8em 0 0.4em;font-size: 1.1em;line-height: 1.5;font-weight: bold;color: #2f4e0d;}
+.U-24100 .mid .tab_item .lists .item .box .txt {margin-bottom: 1.2em;line-height: 1.4;letter-spacing: -1.08px;font-weight: 300;}
+.U-24100 .mid nav a.on {color: #fff;background: #2a2a2a;}
+.U-24100 .mid .tab_item .lists .item.on .box {max-height: 1000px;/* transition: max-height 1s ease; */}
+.U-24100 .mid .tab_item .lists .item {cursor: pointer;}
+.U-24100 .mid .tab_item .lists .item .menu::before {content: '';position: relative;top: -0.15em;display: inline-block;margin-right: 0.23em;width: 0.45em;height: 0.45em;border-radius: 0.45em;background: #444;vertical-align: middle;}
+.U-24100 .mid .tab_item .lists .item.on .menu::before {background: #2f4e0d;}
+.U-24100 .mid .tab_item .lists .item .menu::after {content: '';display: block;position: absolute;top: 0;right: 1.2em;width: 0.87em;height: 100%;background: no-repeat center / contain url('../img/up-arrow.svg');transform: rotate(180deg);}
+.U-24100 .mid .tab_item .lists .item.on .menu::after {transform: rotate(0deg);}
+.U-24100 .spouse {margin-bottom: 0.4em;padding: 1.2em;font-size: 1.3em;background: #fff;border-radius: 0.4em;}
+.U-24100 .spouse legend {width: 100%;margin-bottom: 0.8em;font-size: 1.1em;color: #2f4e0d;}
+.U-24100 .spouse .box {position: relative;margin-bottom: 0.6em;border-bottom: 1px solid;}
+.U-24100 .spouse .box label {display: block;font-size: 0.8em;font-weight: 300;color: #000;}
+.U-24100 .spouse .box .input {padding: 0.6em 0;font-size: 1em;line-height: 1.2;border: 0;outline: 0;background: #fff;}
+.U-24100 .spouse .sub_chk {position: absolute;bottom: 0.8em;right: 0;}
+.U-24100 .spouse .box .input[name='birth_time'] {display: inline-block;width: 70%;}
+.U-24100 .spouse .sub_chk label {position: relative;top: -3px;left: -3px;display: inline;}
+.U-24100 .spouse .box.gender p {display: block;margin-bottom: 0.8em;width: 100%;font-size: 0.8em;font-weight: 300;color: #000;}
+.U-24100 .spouse .box.gender {flex-wrap: wrap;border: 0;}
+.U-24100 .spouse .box.gender input {position: absolute;top: 0;opacity: 0;}
+.U-24100 .spouse .box.gender label {width: 49%;background: #f3f3f3;}
+.U-24100 .spouse .box.gender label[for="female"] {margin: 0;}
+.U-24100 .spouse .btn {border: 1px solid #444;width: 100%;margin-right: 2%;font-size: 1em !important;font-weight: 300;padding: 0.6em;text-align: center;color: #939292;border-radius: 0.2em;border-color: #444;background: #444;}
+.U-24100 .spouse .box.gender input[type="radio"]:checked + label {background: #bae18f !important;color: #2f4e0d}
+.U-24100 .bottom nav {margin-bottom: 1.4em;padding: 1em;}
+.U-24100 .bottom nav i {display: inline-block;margin: 0 0.4em;width: 1px;height: 1em;background: #000;vertical-align: middle;}
+.U-24100 .bottom p {line-height: 1.7;}
+.U-24100 .bottom {padding-bottom: 2.4em;background: #f4f5f9;}
+.U-24100 .bottom nav { background: #eee; }

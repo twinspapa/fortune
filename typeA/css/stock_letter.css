@@ -888,7 +888,7 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .U-24100 .spouse .sub_chk label {position: relative;top: -3px;left: -3px;display: inline;}
 .U-24100 .spouse .box.gender p {display: block;margin-bottom: 0.8em;width: 100%;font-size: 0.8em;font-weight: 300;color: #000;}
 .U-24100 .spouse .box.gender {flex-wrap: wrap;border: 0;}
-.U-24100 .spouse .box.gender input {position: absolute;top: -9999px;opacity: 0;}
+.U-24100 .spouse .box.gender input {position: absolute;top: 0;opacity: 0;}
 .U-24100 .spouse .box.gender label {width: 49%;background: #f3f3f3;}
 .U-24100 .spouse .box.gender label[for="female"] {margin: 0;}
 .U-24100 .spouse .btn {border: 1px solid #444;width: 100%;margin-right: 2%;font-size: 1em !important;font-weight: 300;padding: 0.6em;text-align: center;color: #939292;border-radius: 0.2em;border-color: #444;background: #444;}

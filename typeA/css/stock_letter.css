@@ -898,3 +898,5 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .U-24100 .bottom p {line-height: 1.7;}
 .U-24100 .bottom {padding-bottom: 2.4em;background: #f4f5f9;}
 .U-24100 .bottom nav { background: #eee; }
+.btn.flat {background: transparent;}
+.btn_comm.em.flat {background: transparent;color: #3b98e6;}

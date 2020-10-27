@@ -910,8 +910,8 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 
 .mid nav a {
     flex: 1;
-    margin-right: 1.2em;
-    padding: 0.8em 1.2em;
+    margin-right: 0.6em;
+    padding: 1.4em 0.8em;
     color: #000;
     background: #fff;
     border-radius: 0.4em;
@@ -1107,3 +1107,7 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
     background: #444;
 }
 * { -webkit-tap-highlight-color:rgba(0,0,0,0); }
+.spouse .box.gender input[type="radio"]:checked + label {
+    background: #bae18f !important;
+    color: #2f4e0d
+}

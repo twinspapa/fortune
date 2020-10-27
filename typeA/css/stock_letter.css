@@ -1032,21 +1032,72 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
     border-bottom: 1px solid;
 }
 .spouse .box label {
+    display: block;
     font-size: 0.8em;
     font-weight: 300;
     color: #000;
 }
 
-.spouse .box input {
+.spouse .box .input {
     padding: 0.6em 0;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.2;
     border: 0;
     outline: 0;
+    background: #fff;
 }
 
 .spouse .sub_chk {
-    /* position: absolute; */
-    top: 50%;
+    position: absolute;
+    bottom: 0.8em;
     right: 0;
+}
+
+.spouse .box .input[name='birth_time'] {
+    display: inline-block;
+    width: 70%;
+}
+
+.spouse .sub_chk label {
+    position: relative;
+    top: -3px;
+    left: -3px;
+    display: inline;
+}
+
+.spouse .box.gender p {
+    display: block;
+    margin-bottom: 0.8em;
+    width: 100%;
+    font-size: 0.8em;
+    font-weight: 300;
+    color: #000;
+}
+
+.spouse .box.gender {
+    flex-wrap: wrap;
+    border: 0;
+}
+
+.spouse .box.gender input {
+    position: absolute;
+    top: -9999px;
+    opacity: 0;
+}
+
+.spouse .box.gender label {
+    border: 1px solid #444;
+    width: 49%;
+    margin-right: 2%;
+    font-size: 1.1em;
+    font-weight: 300;
+    padding: 0.6em;
+    text-align: center;
+    color: #939292;
+    border-radius: 0.2em;
+    border-color: #444;
+}
+
+.spouse .box.gender label[for="female"] {
+    margin: 0;
 }

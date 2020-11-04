@@ -1,0 +1,680 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>무료운세</title>
+	<link href="css/stock_letter.css" rel="stylesheet" type="text/css">
+	<link href="css/swiper.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="wrap" class="luck">
+		<div class="header">
+			<h2 class="wrap">
+				<a href="javascript:void(0);" class="prevBtn" role="button">
+					<img src="img/arrow_back.svg" alt="이전">
+				</a>
+				<span class="title">무료운세</span>
+			</h2>
+		</div>
+		<div class="fix_wrap">
+			<div class="container_wrap style01">
+				<div class="both_mod">
+					<!-- 20201029 슬라이드 영역수정 -->
+					<div class="banner">
+						<div class="swiper-container">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<img src="img/luck_01.png" alt="총운, 정통사주, 재물, 궁합, 타로 등 다양한 운세 제공">
+								</li>
+								<li class="swiper-slide">
+									<img src="img/luck_02.png" alt="나의 재물운에 맞는 투자조언 서비스 알림">
+								</li>
+								<li class="swiper-slide">
+									<img src="img/luck_03.png" alt="빌레터 회원만의 특별한 무료 운세 서비스">
+								</li>
+							</ul>
+							<div class="main_pagination"><div class="swiper-pagination"></div></div>
+						</div>
+					</div>
+					<!--// 20201029 슬라이드 영역수정 -->
+					<div class="price">
+						<p>이용요금 : 무료</p>
+					</div>
+                    <!-- 생년월일 입력 폼  -->
+                    <div class="birth_wrap">
+                        <div class="box birth_input flex">
+                            <label for="birth">생년월일</label>
+                            <input type="date" name="birth">
+                        </div>
+                        <div class="box gender_select flex">
+                            <label for="gender">성별</label>
+                            <select name="gender">
+                                <option value="0">남성</option>
+                                <option value="1">여성</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 인증 -->
+                    <div class="sms_wrap">
+    					<div class="input_form" id="payForm">
+    						<div class="cert_ing">
+    							<!-- 인증 진행중일 때 노출 -->
+    							<!-- 휴대폰번호 -->
+    							<div class="if_wrap">
+    								<label for="fi_in_phone">휴대폰번호</label>
+    								<input type="number" inputmode="numeric" pattern="[0-9]*" class="ui_auth_input" id="fi_in_phone" autocomplete="off" value="" maxlength="11" placeholder="상대방 휴대폰번호 입력">
+    							</div>
+    							<!-- 인증번호 : 인증번호 발송하기 클릭되면 노출 -->
+    							<div class="cert_wrap" id="authForm">
+    								<div class="if_wrap cert"> <!-- 20200805 인증번호일치시 : same, 불일치시 : nosame -->
+    									<input type="hidden" id="doneAuth" value="" data-required="true">
+    									<!-- 폰인증이 끝나면 Y를 넣어주시고 $('#payForm').vcBeautifyForm('validate'); 를 실행해주시면 버튼이 활성화됩니다. -->
+    									<input type="number" inputmode="numeric" pattern="[0-9]*" id="fi_in_cert" value="" maxlength="4" placeholder="인증번호 입력" title="인증번호 입력">
+    								</div>
+    								<!-- 기존 남은시간 -->
+    								<!-- <span class="time"><span class="hide">남은시간</span> <span id="authTimer">100분</span></span> -->
+    								<!-- 20200805 일치시 -->
+    								<span class="time"><span class="hide">인증번호 확인</span> <span id="same">일치</span></span>
+    								<p class="r_time" id="sameMsg">인증이 완료되었습니다.</p>
+    								<!-- 20200805 불일치시 -->
+    								<!-- <span class="time" ><span class="hide">인증번호 확인</span> <span id="noSame">불일치</span></span> -->
+    								<p class="r_time" id="nosameMsg">전송된 인증번호의 유효 시간은 <span id="authTimer">3분</span> 입니다.</p>
+    							</div>
+    						</div>
+    						<!-- button -->
+    						<div class="btn_wrap cer">
+    							<button type="button" class="btn_comm impor" id="btnSendAuthNum" disabled="disabled">인증요청</button>
+    							<!-- 휴대폰번호 입력하면 활성화되며 인증번호 발송하기 클릭되면 비 노출 -->
+    						</div>
+    					</div>
+    				</div>
+                    <!-- //인증  -->
+
+					<div class="sides">
+						<div id="checkAll" class="left_side">
+							<div class="chk_wrap">
+								<input type="checkbox" name="fn_privacy_a" id="fn_privacy_a">
+								<label for="fn_privacy_a"><span class="label_group">약관 동의</span></label>
+							</div>
+						</div>
+						<div class="right_side">
+							<ul id="checkList" class="list">
+								<li>
+									<div class="chk_wrap type1" onclick="modal_open('.U-24300_P-01');">
+										<input type="checkbox" name="fn_privacy" id="fn_privacy1">
+										<label for="fn_privacy1"><span class="label_group">마케팅 제공동의</span></label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="btn_wrap">
+					<button type="button" class="btn_comm em" id="btnAccept">무료 운세 확인하기</button>
+				</div>
+			</div>
+			<div class="bottom_conts">
+				<h3 class="tit_note">유의사항</h3>
+				<ul class="list_bl_desc">
+                    <li>본 서비스는 <span class="emp">무료</span>입니다.</li>
+					<li>운세정보를 문자로 받으실 수 있습니다.(주말 및 법정공휴일 제외)</li>
+					<li>별도 해지 요청이 없는 경우 운세 서비스가 유지됩니다.</li>
+					<li>서비스 이용문의 및 해지안내는 ㈜몬스터큐브 고객센터 1522-9746 을 통해 가능합니다.</li>
+					<!-- <li>회사명: ㈜몬스터큐브</li>
+					<li>홈페이지 주소: www.stockletter.kr</li>
+					<li>사업자등록번호 441-87-00779/ 통신판매번호 : 제2018-서울강남-02815호</li> --><!-- 20200608 삭제 -->
+			</div>
+		</div>
+
+        <!-- layer popup, U-24300_A-01-->
+    	<div id="lay_wrap" class="lay_message lay_message_type2 U-24300_A-01">
+    		<div class="lay_content">
+    			<div class="head_group">
+    				<h1 class="tit_message">
+    					<strong class="strong">안내</strong>
+    				</h1>
+    			</div>
+    			<div class="cnt_message">
+    				<div class="mt15">
+    					<p>약관에 동의 해주세요.</p>
+    				</div>
+    			</div>
+    		</div>
+    		<footer class="lay_footer">
+    			<button type="button" class="fl_r ui_modal_never_show" onclick="modal_close('.U-24300_A-01');">확인</button>
+    		</footer>
+    	</div>
+
+        <!-- layer popup, U-24300_A-02 -->
+    	<div id="lay_wrap" class="lay_message lay_message_type2 U-24300_A-02">
+    		<div class="lay_content">
+    			<div class="head_group">
+    				<h1 class="tit_message">
+    					<strong class="strong">안내</strong>
+    				</h1>
+    			</div>
+    			<div class="cnt_message">
+    				<div class="mt15">
+    					<p>신청이 완료되었습니다.</p>
+    				</div>
+    			</div>
+    		</div>
+    		<footer class="lay_footer">
+    			<button type="button" class="fl_r ui_modal_never_show" onclick="modal_close('.U-24300_A-02');">확인</button>
+    		</footer>
+    	</div>
+
+        <!-- layer popup, U-24300_A-04-->
+        <div id="lay_wrap" class="lay_message lay_message_type2 U-24300_A-04">
+            <div class="lay_content">
+                <div class="head_group">
+                    <h1 class="tit_message">
+                        <strong class="strong">안내</strong>
+                    </h1>
+                </div>
+                <div class="cnt_message">
+                    <div class="mt15">
+                        <p>생년월일을 입력 해주세요.</p>
+                    </div>
+                </div>
+            </div>
+            <footer class="lay_footer">
+                <button type="button" class="fl_r ui_modal_never_show" onclick="modal_close('.U-24300_A-04');">확인</button>
+            </footer>
+        </div>
+
+        <!-- layer popup, U-24300_A-05-->
+        <div id="lay_wrap" class="lay_message lay_message_type2 U-24300_A-05">
+            <div class="lay_content">
+                <div class="head_group">
+                    <h1 class="tit_message">
+                        <strong class="strong">안내</strong>
+                    </h1>
+                </div>
+                <div class="cnt_message">
+                    <div class="mt15">
+                        <p>휴대폰 인증을 완료해주세요.</p>
+                    </div>
+                </div>
+            </div>
+            <footer class="lay_footer">
+                <button type="button" class="fl_r ui_modal_never_show" onclick="modal_close('.U-24300_A-05');">확인</button>
+            </footer>
+        </div>
+
+
+        <!-- layer popup, U-24300_P-01 -->
+        <div id="lay_wrap" class="lay_message lay_message_type3 terms U-24300_P-01 pop_agree" style="height:70%">
+            <div class="lay_content">
+                <div class="head_group">
+                    <h1 class="tit_message">
+                        <strong class="strong">운세레터 이용약관</strong>
+                    </h1>
+                </div>
+                <div class="cnt_message">
+                    <div class="scrollY">
+                        <div class="terms_conts">
+                            <div class="box">
+                                <h2>서비스 이용약관</h2>
+                                <pre>
+제1조 (목적)
+본 약관은 "무료운세"를 제공하는 "주식회사 인포바인(이하 '회사'라 합니다.)과 위 서비스를 "이용하는 자(이하 '가입자'라 합니다.)"와의 이용 조건, 절차, 권리, 의무 및 책임사항에 관한 사항을 규정하는 것을 목적으로 합니다.
+
+제 2 조 (이용약관의 효력 및 변경)
+① "무료운세(이하 '서비스'라 합니다.)"는 고객정보(생년월일, 성별)와 관련된 운세정보를 웹 페이지 및 LMS로 제공하는 서비스입니다.
+② "가입자"란 서비스가 제공되는 제휴사의 웹사이트 및 모바일 어플리케이션을 통해 서비스에 가입하고 본 약관에 동의하여 서비스를 이용하는 '개인'을 말합니다.
+③ "휴대폰정보"란 가입자의 이동통신사와 휴대폰번호를 말합니다.
+
+제 3 조 (서비스 이용조건)
+① 이용요금: 무료
+
+제 4 조 (서비스 해지 및 재가입)
+본 서비스는 해지 시 개인정보 보호를 위하여 별도의 본인 확인이 필요합니다. 또한, 서비스를 다시 이용하기 위해서는 신규로 서비스에 가입하셔야 합니다.
+① 인터넷 사이트를 이용한 해지: 무료운세의 서비스 해지 메뉴를 통해 해지하실 수 있습니다.
+② 전화를 이용한 해지: 고객센터 에서 해지가 가능합니다.
+③ 비자발적 해지: 이용자가 타 통신사로 번호이동 하거나 휴대폰 일시 정지 등으로 인하여 서비스 해지를 인지 하지 못한 상태에서 서비스가 해지될 수 있습니다. 이러한 비자발적 해지로 인한 고객 피해 방지를 위하여 서비스 유지 방법이 안내될 수 있습니다.
+④ 강제 해지: 제휴사이트 즉, ‘이용(등록)사이트’에서 이용사이트 회원의 계정에 계정해킹, 명의도용 등의 문제가 있다고 판단하여 ‘회사’에 그 사실을 통보한 경우 ‘회사’에서는 임의로 ‘서비스’ 이용자의 탈퇴를 진행할 수 있습니다.
+
+제 5조 (약관의 효력과 변경)
+① 본 약관은 서비스 화면에 게시하거나 기타의 방법으로 회원에게 공시함으로써 효력이 발생합니다.
+② 온라인으로 서비스에 가입하는 경우, 가입자가 본 약관에 대하여 '동의함'을 선택하고 '확인'버튼을 클릭하면 고객은 본 약관의 내용을 이해하였고 그 적용에 동의한 것으로 간주됩니다.
+③ 회사는 관계 법령을 위배하지 않는 범위에서 본 약관을 개정할 수 있으며, 이 경우 회사는 새로운 약관의 적용 및 개정사유를 명시하고 개정약관 적용일 7일 전에 고지 또는 통지합니다.
+④ 회사가 5조의 규정에 따라 변경 약관을 고지 또는 통지하면서, 가입자가 약관 변경 적용일 까지 거부의사를 표시하지 아니할 경우, 약관의 변경에 동의한 것으로 간주한다는 내용을 고지 또는 통지하였음에도 가입자가 명시적으로 거부 의사를 표시하지 아니한 경우, 가입자가 변경 약관에 동의한 것으로 간주됩니다.
+⑤ 가입자가 변경된 약관에 동의하지 않는 경우 서비스 이용을 중단하고 이용 계약을 해지할 수 있습니다.
+
+제 6조 (약관 동의 철회)
+서비스 해지 시 약관 동의가 철회됩니다.
+
+제 7 조 (의무)
+회사는 본 약관에서 정한 바에 따라 계속적, 안정적으로 본 서비스를 제공할 의무가 있습니다.
+단, 전쟁, 지진, 재난 등 천재지변이나 불가피한 시스템의 고장, 통신서비스 회사의 통신 두절 등 불가항력의 사유가 발생한 경우에는 본 서비스를 중단할 수 있습니다.
+
+제 8 조 (책임과 손해배상)
+① 회사와 가입자는 일방 당사자의 귀책사유로 인하여 상대방에게 발생한 손해에 대하여 배상하여야 합니다.
+② 회사는 본 서비스 가입자의 고의 또는 중과실로 발생한 손해에 대해서 어떠한 책임도 지지 않습니다.
+
+제 9 조 (면책)
+① 회사는 다음 각 호의 사유로 인한 손해에 대하여는 그 책임을 지지 않습니다.
+1) 천재지변 또는 이에 준하는 불가항력으로 인해 본 서비스를 제공할 수 없는 경우
+2) 가입자가 휴대폰번호, 휴대폰비밀번호 또는 서비스암호 등의 관리를 소홀히 한 경우
+3) 고객이 본 서비스에 게재한 정보, 자료, 사실 등이 부정확하여 본 서비스를 원활히 제공할 수 없었던 경우
+4) 회사의 관리영역이 아닌 장애로 본 서비스의 이용이 불가능한 경우
+5) 기타 회사의 귀책사유가 없는 통신서비스 등의 장애로 인한 경우
+② 회사는 가입자상호간 또는 가입자와 제3자 상호간에 본 서비스와 관련한 분쟁에 개입할 의무가 없으며, 회사의 귀책사유가 없는 한 이로 인한 손해를 배상할 책임이 없습니다.
+③ 회사는 가입자가 서비스를 이용하여 기대하는 수익을 상실한 것에 대하여 책임을 지지 않으며 그 밖에 서비스를 통하여 얻은 자료로 인한 손해 등에 대하여도 책임을 지지 않습니다.
+④ 가입자는 서비스상의 데이터 및 분석자료가 투자를 위한 정보제공을 목적으로 하는 것에 따라서 투자의 책임은 정보를 이용하는 가입자에게 있다는 점을 확인합니다.
+
+제 10 조 (분쟁의 해결)
+① 회사와 가입자간 분쟁 발생시, 회사와 가입자는 분쟁해결을 위해 성실히 협의합니다.
+② 본 약관과 관련한 제반 분쟁 및 소송의 관할은 민사소송법상 관할 조항에 따릅니다.
+
+[부칙]
+본 약관은 2020년 10월 30일부터 적용됩니다.
+                                </pre>
+                                <h2>개인정보수집 및 이용 동의</h2>
+                                <pre>
+“무료운세(이하 ‘서비스’라 합니다)”의 서비스 제공 및 이용과 관련하여 ㈜인포바인 (이하 ‘회사’라 합니다)이 취득한 개인정보는 “통신비밀보호법”, “전기통신사업법” 및 “정보통신망 이용촉진 및 정보보호 등에 관한 법률” 등 정보통신서비스제공자가 준수하여야 할 관련 법령상의 개인정보 보호 규정을 준수합니다.
+
+제 1 조 (개인정보의 수집 및 이용)
+본 서비스는 이동통신사의 무료서비스로, 회사는 본 서비스를 이용자에게 제공하기 위해 다음과 같이 개인정보를 수집 및 이용합니다.
+                                </pre>
+                                <div class="tb_type1">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:10%">
+                                            <col style="width:30%">
+                                            <col style="width:30%">
+                                            <col style="width:30%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="col">분류</th>
+                                                <th class="col">수집 및 이용 목적</th>
+                                                <th class="col">수집 및 이용 항목</th>
+                                                <th class="col">보유 및 이용기간</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>필수정보</td>
+                                                <td>
+                                                    -서비스 가입<br />
+                                                    -서비스 이용<br />
+                                                    -서비스 해지<br />
+                                                    -서비스 관련 정보 LMS발송
+                                                </td>
+                                                <td>
+                                                    -이동전화번호<br />
+                                                    -생년월일<br />
+                                                    -성별
+                                                </td>
+                                                <td>
+                                                    서비스 해지 후 삭제
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    생성정보
+                                                </td>
+                                                <td>
+                                                    -서비스 가입/해지일자
+                                                    -서비스 이용 및 상담
+                                                </td>
+                                                <td>
+                                                    서비스 이용기록
+                                                </td>
+                                                <td>
+                                                    서비스 해지 후 삭제
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <pre>
+제 2 조 (개인정보 보유 및 이용기간)
+1. 가입자가 서비스 해지를 요청하거나 개인정보 수집 및 이용에 대한 동의를 철회하는 경우 개인정보를 지체 없이 파기합니다. 단, 상법, 국세 기본법 등에서 소비자보호에 관한 법률 등 관계법령에 따라 보존할 필요가 있는 경우 회사는 관계법령에서 정한 기간 동안 회원정보를 보관합니다. 이 경우 회사는 보관하는 정보를 보존 목적에 근거해 이용하며 보존 기간은 다음과 같습니다.
+① 표시, 광고에 관한 기록
+-보존 근거 : 전자상거래 등에서의 소비자보호에 관한 법률
+-보존 기간 : 6개월
+② 계약 또는 청약철회 등에 관한 기록
+-보존 근거 : 전자상거래 등에서의 소비자보호에 관한 법률
+-보존 기간 : 5년
+③ 소비자의 불만 또는 분쟁처리에 관한 기록
+-보존 근거 : 전자상거래 등에서의 소비자보호에 관한 법률
+-보존 기간 : 3년
+④ 소비자의 불만 또는 분쟁처리에 관한 기록
+-보존 근거 : 전자상거래 등에서의 소비자보호에 관한 법률
+-보존 기간 : 3년
+⑤ 수사기관이 압수수색영장 통해 요청 시 제공
+-보존 근거 : 통신비밀보호법
+-보존 기간 : 6개월
+
+2. 개인정보 유효기간제의 적용
+회사는 정보통신망법 관련 조항에 따라 고객이 1년(이하 ‘개인정보유효기간’이라고 합니다)동안 서비스를 이용한 사실 또는 활동한 기록이 없는 경우, 개인정보의 안전한 보호 및 피해 발생을 방지하기 위해 ‘정보통신망법 제29조’에 근거하여 고객에게 사전통지하고 개인정보를 별도로 분리하여 저장 및 관리합니다. 회사는 유효기간 도래 30일 전까지 이메일, 문자메시지, 휴대전화 등 고객이 입력한 연락수단을 통하여 사전 통지합니다. 개인정보가 개인정보유효기간제에 의해 별도 분리된 경우라도 고객이 서비스 재이용을 원할 경우, 소정의 절차를 거쳐 서비스를 재이용할 수 있습니다.
+
+제 3 조 (개인정보 제공 철회)
+1. 서비스 가입을 통한 개인정보의 수집, 이용, 제공과 관련해 귀하께서는 동의한 내용을 언제든지 철회하실 수 있습니다. 동의철회는 홈페이지 첫 화면의 [서비스 해지]를 클릭하면 개인정보의 수집․이용․제공에 대한 동의를 바로 철회할 수 있으며, 개인정보보호책임자에게 서면, 전화, 이메일(E-mail) 등으로 연락하시면 회사는 즉시 동의 철회를 위한 필요 조치를 취합니다. 동의를 철회하고 개인정보를 파기하는 등의 조치가 있으면 그 사실을 고객에게 가용 연락 수단을 통해 바로 통지합니다.
+
+제 4 조 (수집한 개인정보의 파기 절차)
+회사는 수집한 개인정보의 이용목적이 달성된 후에는 보관기간 및 이용기간에 따라 해당 정보를 파기합니다. 파기절차 및 방법은 다음과 같습니다.
+1. 파기절차: 이용자가 서비스 가입 등을 위해 회사에 제공한 개인정보는 서비스 해지 등 이용목적이 달성된 후 내부 방침 및 기타 관련 법령의 규정에 따른 보유기간이 경과한 후에 삭제하거나 파기합니다.
+2. 파기기한: 이용자의 개인정보 보유기간이 경과 시 삭제합니다. 다만, 타인의 개인정보를 도용하여 회원가입 등이 이뤄졌음을 알게 된 때에 회사는 지체 없이 해당 이용자에게 필요한 조치를 취할 수 있습니다. 또 이용자 중 자신의 개인정보도용을 인지한 이용자가 해당 이용자에 대해 서비스 이용정지 또는 탈퇴를 요구하는 경우에도 필요한 조치를 취할 수 있으며, 소정의 절차를 거쳐 유관기관 또는 관계기관에 그 내용이 제출될 수 있습니다.
+3. 파기방법: 종이에 출력된 개인정보는 분쇄기로 분쇄 또는 소각하거나 화학약품 처리하여 용해․파기하고, 전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.
+
+제 5 조 (개인정보 처리 위탁)
+회사는 서비스 향상을 위해서 아래와 같이 개인정보를 위탁 할 수 있으며, 관계법령에 따라 개인정보가 안전하게 관리될 수 있도록 필요한 사항을 규정하고 있습니다.
+                                </pre>
+                                <div class="tb_type1">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:50%;">
+                                            <col style="width:50%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="col">위탁 업체명</th>
+                                                <th class="col">위탁 업무</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>이동통신사(SKT)</td>
+                                                <td>문자 메시지 발송</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <pre>
+(시행일) 이 약관은 2020년 10월 30일부터 시행합니다.
+                                </pre>
+                            </div>
+                            <div class="box">
+                                <h2>제 3자 제공동의</h2>
+                                <pre>
+1. “무료운세(이하 ‘서비스’라 합니다)”의 서비스와 관련하여 정보통신망 이용촉진 및 정보보호 등에 관한 법률 및 개인정보보호법에 의해 무료운세 서비스 이용자(이하 '이용자')로부터 수집한 개인정보를 아래와 같이 제3자에게 제공합니다.
+                                </pre>
+                                <div class="tb_type1">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
+                                            <col style="width:25%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="col">제공받는 자</th>
+                                                <th class="col">제공받는 자의 개인정보 이용목적</th>
+                                                <th class="col">개인정보 제공항목</th>
+                                                <th class="col">제공받는 자의 보유 및 이용기간</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>이동통신사(SKT)</td>
+                                                <td>
+                                                    서비스 가입/해지<br />
+                                                    서비스 제공
+                                                </td>
+                                                <td>휴대폰 번호</td>
+                                                <td>서비스 해지 후 삭제</td>
+                                            </tr>
+                                            <tr>
+                                                <td>(주)몬스터큐브</td>
+                                                <td>
+                                                    서비스 정보 조회
+                                                </td>
+                                                <td>성별, 생년월일</td>
+                                                <td>서비스 정보 생성 목적 달성 시</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <pre>
+2. 서비스를 제공함에 있어서 취득한 이용자의 인적사항, 접근매체에 관한 정보 또는 자료를 이용자의 동의를 얻지 아니하고 제3자에게 제공, 누설하거나 업무상 목적 외에 사용하지 아니합니다.
+
+3. 이용자는 회사에 개인정보 제공, 이용동의를 거부할 권리가 있습니다. 다만, 개인정보의 제공을 거부할 경우 서비스를 사용하실 수 없음을 알려 드립니다.
+
+(시행일) 이 약관은 2020년 10월 30일부터 시행합니다.
+                                </pre>
+                            </div>
+                            <div class="box">
+                                <h2>마케팅 정보 활용 동의</h2>
+                                <pre>
+마케팅 정보 수신 여부 및 마케팅을 위한 개인정보 수집이용을 거부하실 수 있으며, 거부 시에도 서비스를 이용하실 수 있으나, 동의를 거부한 경우 각종 소식 및 이벤트 참여에 제한이 있을 수 있습니다.
+                                </pre>
+                                <div class="tb_type1">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:33.33%;">
+                                            <col style="width:33.33%;">
+                                            <col style="width:33.33%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="col">개인정보 수집 항목</th>
+                                                <th class="col">개인정보 수집 이용 목적</th>
+                                                <th class="col">보유 및 이용기간</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>이동전화번호</td>
+                                                <td>-빌레터 부가서비스 이벤트 운영 및 광고성 정보 전송</td>
+                                                <td>-빌레터 부가서비스 관련 정보 전송 서비스 해지 후 삭제</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="lay_footer btn_area_cls">
+                <button type="button" class="fl_r ui_modal_never_show btn_cls" onclick="modal_close('.U-24300_P-01');"><span class="hide">닫기</span></button>
+            </footer>
+        </div>
+	</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/vcui.js"></script>
+    <script src="js/vcui.common-ui.js"></script>
+    <script src="js/site.js"></script>
+    <script>
+    // 모달창 제어
+    function modal_close(el) { $(el).vcModal('close'); } // 닫아준다.
+    function modal_open(el) { $(el).vcModal('open'); } // 모달생성
+
+    $(function () {
+        vcui.require([
+            'ui/checkboxAllChecker',
+            'ui/beautifyForm'
+        ], function () {
+            // 휴대폰 번호 입력체크
+            $('#payForm').vcBeautifyForm();
+        });
+
+
+        //모달창 푸터 버튼영역이 있을경우 class 추가
+        $("#lay_wrap").children('.lay_footer').parents('#lay_wrap').addClass('lay_hasFoot');
+
+
+        // 이용약관 동의 체크
+        var $checkAll = $('#checkAll').find('input[type="checkbox"]'),
+            $checkList = $('input[name="fn_privacy"]');
+        $checkAll.on('change', function () {
+            var checked = $(this).prop('checked');
+            $('input[name="fn_privacy"]').prop('checked', checked);
+        });
+        $checkList.on('change', function () {
+            var cl = $checkList.length,
+            ccl = $('input[name="fn_privacy"]:checked').length,
+            chkTrue = (cl == ccl);
+            $checkAll.prop('checked', chkTrue);
+        });
+
+
+        // 휴대폰번호 입력 유효성체크 완료시 인증번호 발송버튼 활성화
+        $('#payForm').on('input focusout keyup', '.ui_auth_input', function () {
+            var mobile = $('#fi_in_phone').val(),
+                rgEx = /^(01[016789]{1}[1-9]{1}[0-9]{2,3})[0-9]{4}$/,
+                chkFlg = rgEx.test(mobile);
+
+            if(chkFlg) {
+                $('#btnSendAuthNum').prop('disabled',false);
+            }
+        });
+
+
+        // 인증번호 발송버튼 클릭
+        $('#btnSendAuthNum').on('click', function () {
+            $('#nosameMsg').show();
+            if (timeStatus == '') {
+                timeStart();
+            } else {
+                timeReset();
+            }
+            $('#sameMsg').hide();
+            $('.time').hide();
+            $('#authForm').show(); // 인증번호 입력란 표시
+            $(this).text('재전송');
+            $(this).prop('disabled', true);
+            setTimeout(function(){
+                $('#btnSendAuthNum').prop('disabled', false);
+            },3000);
+            // 인증번호 발송전 SKT 회원인지 확인하는 유효성 검사 필요
+            if (true) {
+                alert('인증번호가 발송되었습니다.');
+            } else {
+                alert('무료운세 서비스는 SKT회원만 이용가능한 서비스 입니다.');
+            }
+        });
+
+
+        // 인증번호 입력완료 유효성 체크
+        $('#fi_in_cert').on('input', function () {
+            if ($('#fi_in_cert').val().length == 4) { //인증번호 4자리 입력완료시 유효성 체크
+                if(true){ //SMS 인증 성공 시
+                    $('#doneAuth').val('Y');
+                    $('#payForm').css('pointer-events','none');
+                    $('#authForm .cert').addClass('on same');
+                    $('#authForm .cert').removeClass('nosame');
+                    $('#btnSendAuthNum').prop('disabled', true);
+                    $('.time').text('일치').show(); // 인증완료 문구 출력
+                    $('#sameMsg').show(); // 인증완료 문구 출력
+                    $('#nosameMsg').hide();
+                } else { //인증 실패시
+                    $('#authForm .cert').addClass('on nosame');
+                    $('#authForm .cert').removeClass('same');
+                    $('.time').text('불일치').show();
+                }
+            }
+        });
+
+
+        // 무료운세확인하기(서비스 신청)버튼 클릭
+        $('#btnAccept').on('click', function() {
+            if ($("input[name=birth]").val() == "") {
+                modal_open('.U-24300_A-04');
+            } else if ($('#doneAuth').val() == '') {
+                modal_open('.U-24300_A-05');
+            } else if ($('input[name="fn_privacy"]').is(":checked") == false) {
+                modal_open('.U-24300_A-01');
+            } else {
+                // modal_open('.U-24300_P-00');
+                // 서비스 신청 완료 프로세스 삽입
+                modal_open('.U-24300_A-02');
+            }
+        });
+    });
+
+
+    /* 슬라이드 배너 */
+    var Swiper = new Swiper('.banner .swiper-container', {
+        spaceBetween: 0,
+        loop: false,
+        centeredSlides: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+        keyboard: {
+            enabled: true,
+        },
+        on: {
+            init: function (swiper) {
+                $('.swiper-slide').attr('aria-hidden', 'true');
+                var fl = $('.swiper-wrapper').find('a');
+                fl.removeAttr('data-default-tabindex');
+                fl.removeAttr('tabindex');
+                fl.attr({
+                    'tabindex': '-1',
+                    'data-default-tabindex': 'none'
+                });
+                $('.swiper-slide-active').attr('aria-hidden', 'false');
+                var fa = $('.swiper-slide-active').find('a');
+                fa.attr({
+                    'tabindex': '0',
+                    'data-default-tabindex': '0'
+                });
+            },
+            slideChange: function (swiper) {
+                $('.swiper-slide').attr('aria-hidden', 'true');
+                var fl = $('.swiper-wrapper').find('a');
+                fl.attr({
+                    'tabindex': '-1',
+                    'data-default-tabindex': 'none'
+                });
+                setTimeout(function () {
+                    $('.swiper-slide-active').attr('aria-hidden', 'false');
+                    var fa = $('.swiper-slide-active').find('a');
+                    fa.attr({
+                        'tabindex': '0',
+                        'data-default-tabindex': '0'
+                    });
+                }, 100);
+            }
+        }
+    });
+
+
+    // 인증번호 유효 시간 타이머
+    var timeStatus = '',
+        time = 179,
+        min = '',
+        sec = '';
+
+    function timeStart() {
+        var x = setInterval(function() {
+                var min = parseInt(time/60),
+                sec = time%60;
+
+                if (time < 0) {
+                clearInterval(x);
+                } else {
+                    $('#authTimer').html(min + '분' + sec +'초');
+                }
+            time--;
+            timeStatus = 'ing';
+        }, 1000);
+    }
+
+    function timeReset() {
+        time = 179;
+    }
+	</script>
+</body>
+
+</html>

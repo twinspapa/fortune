@@ -848,7 +848,7 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 
 .U-24100 { min-width: 320px; background: #f4f5f9;}
 .U-24100 .top {padding: 1.2em 1.5em;}
-.U-24100 .top .tit {font-size: 1.5em;font-weight: bold;color: #2f4e0d;}
+.U-24100 .top .tit {font-size: 1.5em;font-weight: bold;color: #2f4e0d;margin-bottom: 0.7em;}
 .U-24100 .top .txt {margin: 0.7em 0;font-size: 1.3em;font-weight: 300;color: #000;}
 .U-24100 .top .date {margin-bottom: 1.8em;font-weight: 300;color: #2f4e0d;}
 .U-24100 .top .card {padding: 1.8em;border-radius: 0.4em;background: #fff;box-shadow: 1.1px 4.9px 12.4px 0.7px rgba(18, 18, 18, 0.08);}

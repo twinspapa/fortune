@@ -23,7 +23,7 @@
     <div class="fix_wrap">
       <div class="top center">
         <h3 class="tit">오늘의 운세</h3>
-        <p class="txt">생각치 않았던 도움을 받을 수 있습니다.</p>
+        <!-- <p class="txt">생각치 않았던 도움을 받을 수 있습니다.</p> -->
         <p class="date">2020년 7월 30일</p>
         <div class="card flex">
           <div class="num w50">
@@ -323,7 +323,7 @@
       </div>
     </div>
 
-    <!-- layer popup, spouse : 배우자 생년월일 입력 -->
+    <!-- layer popup, spouse : 배우자 혈액형 입력 -->
     <div class="blood lay_wrap lay_message lay_message_type3 custom_fortune">
       <div class="lay_content">
         <div class="head_group">
@@ -696,9 +696,7 @@
         $('.lists .item[value="blood"]').addClass('on');
       }
 
-      setTimeout(function() {
-        fnMove(clickDatatype);
-      }, 500);
+      fnMove(clickDatatype);
     }
 
     $(function() {
@@ -740,9 +738,7 @@
           clickEl.toggleClass('on');
           $('.lists .item').not(clickEl).removeClass('on');
 
-          setTimeout(function() {
-            fnMove(clickDatatype);
-          }, 500);
+          fnMove(clickDatatype);
         }
       });
     });

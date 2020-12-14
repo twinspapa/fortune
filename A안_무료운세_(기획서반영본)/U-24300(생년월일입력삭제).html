@@ -83,7 +83,7 @@
 		</div>
 
         <!-- layer popup, U-24300_A-01-->
-    	<div id="lay_wrap" class="lay_message lay_message_type2 U-24300_A-01">
+    	<div class="lay_message lay_message_type3 U-24300_A-01">
     		<div class="lay_content">
     			<div class="head_group">
     				<h1 class="tit_message">
@@ -102,7 +102,7 @@
     	</div>
 
         <!-- layer popup, U-24300_A-02 -->
-    	<div id="lay_wrap" class="lay_message lay_message_type2 U-24300_A-02">
+    	<div class="lay_message lay_message_type3 U-24300_A-02">
     		<div class="lay_content">
     			<div class="head_group">
     				<h1 class="tit_message">
@@ -121,7 +121,7 @@
     	</div>
 
         <!-- layer popup, U-24300_P-00 기획서 변경으로 인한 서비스신청 최종확인 팝업 삭제
-    	<div id="lay_wrap" class="lay_alert U-24300_P-00">
+    	<div class="lay_alert U-24300_P-00">
     		<div class="lay_content">
     			<div class="head_group">
     				<p class="img_logo"><img src="img/img_outLink.png" alt=""></p>
@@ -145,7 +145,7 @@
         -->
 
         <!-- layer popup, U-24300_P-01 -->
-    	<div id="lay_wrap" class="lay_message lay_message_type3 terms U-24300_P-01" style="height:70%">
+    	<div class="lay_message lay_message_type3 terms U-24300_P-01" style="height:70%">
     		<div class="lay_content">
     			<div class="head_group">
     				<h1 class="tit_message">
@@ -311,7 +311,7 @@
         }
 
         //모달창 푸터 버튼영역이 있을경우 class 추가
-        $("#lay_wrap").children('.lay_footer').parents('#lay_wrap').addClass('lay_hasFoot');
+        $(".lay_message").children('.lay_footer').parents('.lay_message').addClass('lay_hasFoot');
 
 	</script>
 </body>

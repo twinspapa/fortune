@@ -407,7 +407,7 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .list_ac.ui_accordion ul li.on .head a:before{-webkit-transform:translate(-2px, 0) rotate(45deg);transform:translate(-2px, 0) rotate(45deg)}
 .list_ac.ui_accordion ul li.on .head a:after{-webkit-transform:translate(2px, 0) rotate(-45deg);transform:translate(2px, 0) rotate(-45deg)}
 .list_ac.ui_accordion ul li .cont{padding:10px 20px 10px}
-.bottom{width:100%;background-color:#fff}
+.bottom{width:100%;background-color:#fff;}
 .bottom .wrap .terms{width:100%;height:52px;vertical-align:middle;line-height:52px;display:inline-block;text-align:center;background-color:#f2f2f2}
 .bottom .wrap .terms .term a{display:inline-block;font-size:1.3rem;letter-spacing:-1px}
 .bottom .wrap .terms .term:before{content:"";display:inline-block;width:1px;height:9px;border-left:1px #666 solid;margin:0 4px}
@@ -557,10 +557,8 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .tab_t_wrap.num05 li,.tab_in_wrap.num05>ul>li{width:20%}
 .tab_t_wrap li:nth-child(2) a, .tab_t_wrap li:nth-child(3) a {letter-spacing: -1px;}
 @media all and (min-width:241px) and (max-width:320px){
-	.tab_t_wrap li a{font-size:1.2rem;letter-spacing:-.13rem}
-    .tab_t_wrap li:nth-child(2) a, .tab_t_wrap li:nth-child(3) a {font-size:1.2rem; letter-spacing: -1.6px;}
-}
-@media all and (max-width:240px){
+	.tab_t_wrap li a{font-size:1.2rem;letter-spacing:-.13rem}.tab_t_wrap li:nth-child(2) a, .tab_t_wrap li:nth-child(3) a {font-size:1.2rem; letter-spacing: -1.6px;}}
+@media all and (max-width:240px)
 	.tab_t_wrap li a{font-size:1.1rem}
 }
 /* swipe tab */
@@ -603,7 +601,7 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .lay_wrap .lay_content .btns_area .btn_list>li{margin-top:10px}
 .lay_wrap .lay_content .btns_area .btn_list>li:first-child{margin-top:0}
 .lay_wrap .lay_content .btns_area .btn_comm{margin:0 5px;font-size:1.4rem}
-.lay_wrap .lay_footer{display:block;position:absolute;left:17px;right:17px;bottom:0;padding:16px 0 20px;box-sizing:border-box}
+.lay_wrap .lay_footer{display:block;position:absolute;left:17px;right:17px;bottom:0;padding:16px 0 20px;box-sizing:border-box;}
 .lay_wrap .lay_footer:after{display:block;clear:both;content:''}
 .lay_wrap .lay_footer button,lay_wrap .lay_footer a{color:#000;font-size:1.3rem;box-sizing:border-box}
 .lay_wrap .lay_footer button.em,
@@ -868,31 +866,24 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .U-24100 .mid .tab_item .lists {display: none;}
 .U-24100 .mid .tab_item .lists.on {display: block;}
 .U-24100 .mid .tab_item .lists .item .menu {position: relative;margin: 0.4em 0;padding: 1.2em;font-size: 1.3em;font-weight: 300;color: #000;background: #fff;border-radius: 0.4em;}
-.U-24100 .mid .tab_item .lists .item .box {padding: 0 1.2em;font-size: 1.3em;background: #fff;border-radius: 0.4em;max-height: 0;overflow: hidden;transition: max-height 1s ease-out;}
-.U-24100 .mid .tab_item .lists .item .box .tit {margin: 0.8em 0 0.4em;font-size: 1.1em;line-height: 1.5;font-weight: bold;color: #2f4e0d;}
-.U-24100 .mid .tab_item .lists .item .box .txt {margin-bottom: 1.2em;line-height: 1.4;letter-spacing: -1.08px;font-weight: 300;}
+.U-24100 .mid .tab_item .lists .item > .box {padding: 0 1.2em;font-size: 1.3em;background: #fff;border-radius: 0.4em;max-height: 0;overflow: hidden;transition: max-height 1s ease-out;}
+.U-24100 .mid .tab_item .lists .item > .box .tit {margin: 0.8em 0 0.4em;font-size: 1.1em;line-height: 1.5;font-weight: bold;color: #2f4e0d;}
+.U-24100 .mid .tab_item .lists .item > .box .txt {margin-bottom: 1.2em;line-height: 1.4;letter-spacing: -1.08px;font-weight: 300;}
 .U-24100 .mid nav a.on {color: #fff;background: #2a2a2a;}
-.U-24100 .mid .tab_item .lists .item.on .box {max-height: 1000px;/* transition: max-height 1s ease; */}
+.U-24100 .mid .tab_item .lists .item.on > .box {max-height: 1000px;/* transition: max-height 1s ease; */}
 .U-24100 .mid .tab_item .lists .item {cursor: pointer;}
 .U-24100 .mid .tab_item .lists .item .menu::before {content: '';position: relative;top: -0.15em;display: inline-block;margin-right: 0.23em;width: 0.45em;height: 0.45em;border-radius: 0.45em;background: #444;vertical-align: middle;}
 .U-24100 .mid .tab_item .lists .item.on .menu::before {background: #2f4e0d;}
 .U-24100 .mid .tab_item .lists .item .menu::after {content: '';display: block;position: absolute;top: 0;right: 1.2em;width: 0.87em;height: 100%;background: no-repeat center / contain url('../img/up-arrow.svg');transform: rotate(180deg);}
 .U-24100 .mid .tab_item .lists .item.on .menu::after {transform: rotate(0deg);}
-.U-24100 .spouse {margin-bottom: 0.4em;padding: 1.2em;font-size: 1.3em;background: #fff;border-radius: 0.4em;}
-.U-24100 .spouse legend {width: 100%;margin-bottom: 0.8em;font-size: 1.1em;color: #2f4e0d;}
-.U-24100 .spouse .box {position: relative;margin-bottom: 0.6em;border-bottom: 1px solid;}
-.U-24100 .spouse .box label {display: block;font-size: 0.8em;font-weight: 300;color: #000;}
-.U-24100 .spouse .box .input {padding: 0.6em 0;font-size: 1em;line-height: 1.2;border: 0;outline: 0;background: #fff;}
-.U-24100 .spouse .sub_chk {position: absolute;bottom: 0.8em;right: 0;}
-.U-24100 .spouse .box .input[name='birth_time'] {display: inline-block;width: 70%;}
-.U-24100 .spouse .sub_chk label {position: relative;top: -3px;left: -3px;display: inline;}
-.U-24100 .spouse .box.gender p {display: block;margin-bottom: 0.8em;width: 100%;font-size: 0.8em;font-weight: 300;color: #000;}
-.U-24100 .spouse .box.gender {flex-wrap: wrap;border: 0;}
-.U-24100 .spouse .box.gender input {position: absolute;top: 0;opacity: 0;}
-.U-24100 .spouse .box.gender label {width: 49%;background: #f3f3f3;}
-.U-24100 .spouse .box.gender label[for="female"] {margin: 0;}
-.U-24100 .spouse .btn {border: 1px solid #444;width: 100%;margin-right: 2%;font-size: 1em !important;font-weight: 300;padding: 0.6em;text-align: center;color: #939292;border-radius: 0.2em;border-color: #444;background: #444;}
-.U-24100 .spouse .box.gender input[type="radio"]:checked + label {background: #bae18f !important;color: #2f4e0d}
+.lay_wrap.custom_fortune {font-size: 1.3em;}
+.lay_wrap.custom_fortune .box {position: relative;padding: 1.2em 0 0;}
+.lay_wrap.custom_fortune .box label {display: block;}
+.lay_wrap.custom_fortune .box .input {padding: 0.8em 0 0.6em;border: 0;outline: 0;border-bottom: 1px solid;}
+.lay_wrap.custom_fortune .sub_chk {padding: 1.2em 0 0;}
+.lay_wrap.custom_fortune .box .input[name='birth_time'] {/* display: inline-block; *//* width: 70%; */}
+.lay_wrap.custom_fortune .sub_chk label {position: relative;top: -3px;/* left: -3px; */display: inline;margin-right: 4px;}
+.lay_wrap.custom_fortune .btn {border: 1px solid #444;width: 100%;padding: 0.6em;text-align: center;border-radius: 0.2em;border-color: #444;background: #444;}
 .U-24100 .bottom nav {margin-bottom: 1.4em;padding: 1em;}
 .U-24100 .bottom nav i {display: inline-block;margin: 0 0.4em;width: 1px;height: 1em;background: #000;vertical-align: middle;}
 .U-24100 .bottom p {line-height: 1.7;}
@@ -907,3 +898,10 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .pop_agree .cnt_message .tb_type1 th {border-top: 1px solid #eee;font-size: 12px;text-align: center;}
 .pop_agree .tb_type1 th:first-child, .pop_agree .tb_type1 td:first-child {border-left: 0;}
 .pop_agree .cnt_message .tb_type1 td {font-size: 12px;font-weight: 300;}
+
+.lay_wrap.custom_fortune .bottom.flex {width: auto;margin: 16px -14px 0;border-top: 1px solid #eee;border-radius: 0 0 6px 6px;}
+.lay_wrap.custom_fortune .bottom.flex .btn {padding: 1.2em;background: transparent;border: 0;font-size: 1.1em;}
+.lay_wrap.custom_fortune .bottom.flex .btn:first-child {border-right: 1px solid #eee;color: #000;}
+.lay_wrap.custom_fortune .lay_content {padding-bottom: 0;}
+.lay_wrap.custom_fortune strong.strong, .lay_wrap.custom_fortune .tit_message {font-weight: normal;text-align: center;}
+.lay_wrap.custom_fortune .box.gender, .lay_wrap.custom_fortune .box.blood_type {margin-bottom: 1.2em;}

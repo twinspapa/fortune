@@ -696,7 +696,9 @@
         $('.lists .item[value="blood"]').addClass('on');
       }
 
-      fnMove(clickDatatype);
+      setTimeout(function() {
+        fnMove(clickDatatype);
+      }, 500);
     }
 
     $(function() {
@@ -738,7 +740,9 @@
           clickEl.toggleClass('on');
           $('.lists .item').not(clickEl).removeClass('on');
 
-          fnMove(clickDatatype);
+          setTimeout(function() {
+            fnMove(clickDatatype);
+          }, 500);
         }
       });
     });

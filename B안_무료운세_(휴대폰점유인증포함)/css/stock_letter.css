@@ -866,11 +866,11 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .U-24100 .mid .tab_item .lists {display: none;}
 .U-24100 .mid .tab_item .lists.on {display: block;}
 .U-24100 .mid .tab_item .lists .item .menu {position: relative;margin: 0.4em 0;padding: 1.2em;font-size: 1.3em;font-weight: 300;color: #000;background: #fff;border-radius: 0.4em;}
-.U-24100 .mid .tab_item .lists .item > .box {padding: 0 1.2em;font-size: 1.3em;background: #fff;border-radius: 0.4em;max-height: 0;overflow: hidden;transition: max-height 1s ease-out;}
+.U-24100 .mid .tab_item .lists .item > .box {padding: 0 1.2em;font-size: 1.3em;background: #fff;border-radius: 0.4em;max-height: 0;overflow: hidden;transition: max-height 0.3s ease;}
 .U-24100 .mid .tab_item .lists .item > .box .tit {margin: 0.8em 0 0.4em;font-size: 1.1em;line-height: 1.5;font-weight: bold;color: #2f4e0d;}
 .U-24100 .mid .tab_item .lists .item > .box .txt {margin-bottom: 1.2em;line-height: 1.4;letter-spacing: -1.08px;font-weight: 300;}
 .U-24100 .mid nav a.on {color: #fff;background: #2a2a2a;}
-.U-24100 .mid .tab_item .lists .item.on > .box {max-height: 1000px;/* transition: max-height 1s ease; */}
+.U-24100 .mid .tab_item .lists .item.on > .box {max-height: 1000px;transition: max-height 0.5s ease;}
 .U-24100 .mid .tab_item .lists .item {cursor: pointer;}
 .U-24100 .mid .tab_item .lists .item .menu::before {content: '';position: relative;top: -0.15em;display: inline-block;margin-right: 0.23em;width: 0.45em;height: 0.45em;border-radius: 0.45em;background: #444;vertical-align: middle;}
 .U-24100 .mid .tab_item .lists .item.on .menu::before {background: #2f4e0d;}

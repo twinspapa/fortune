@@ -297,14 +297,6 @@
               <label for="birth_day">생년월일</label>
               <input type="date" id="birth_day" class="input w100" name="birth_day" value="">
             </div>
-            <div class="box">
-              <label for="birth_time">태어난 시간</label>
-              <input type="time" id="birth_time" class="input w100" name="birth_time" value="">
-              <div class="sub_chk">
-                <label for="noTime">시간모름</label>
-                <input type="checkbox" id="noTime" name="noTime" value="noTime">
-              </div>
-            </div>
             <div class="box gender">
               <label for="gender_select_1">성별</label>
               <select id="gender_select_1" class="gender_select input w100" name="gender_select">
@@ -327,22 +319,24 @@
     <div class="blood lay_wrap lay_message lay_message_type3 custom_fortune">
       <div class="lay_content">
         <div class="head_group">
-          <h1 class="tit_message">상대방 혈액형을 입력해 주세요</h1>
+          <h1 class="tit_message">혈액형을 입력해 주세요</h1>
         </div>
         <div class="cnt_message">
           <form class="" action="index.html" method="post">
             <div class="box gender">
-              <label for="gender_select_2">성별</label>
-              <select id="gender_select_2" class="gender_select input w100" name="gender_select">
-                <option value="">성별을 선택하세요</option>
-                <option value="man">남성</option>
-                <option value="female">여성</option>
+              <label for="blood_select_1">본인 혈액형</label>
+              <select id="blood_select_1" class="blood_select input w100" name="blood_select_1">
+                <option value="">혈액형을 선택하세요</option>
+                <option value="A">A형</option>
+                <option value="B">B형</option>
+                <option value="AB">AB형</option>
+                <option value="O">O형</option>
               </select>
             </div>
             <div class="box blood_type">
-              <label for="gender_select_2">혈액형</label>
-              <select id="gender_select_2" class="gender_select input w100" name="gender_select">
-                <option value="">성별을 선택하세요</option>
+              <label for="blood_select_2">상대방 혈액형</label>
+              <select id="blood_select_2" class="blood_select input w100" name="blood_select_2">
+                <option value="">혈액형을 선택하세요</option>
                 <option value="A">A형</option>
                 <option value="B">B형</option>
                 <option value="AB">AB형</option>

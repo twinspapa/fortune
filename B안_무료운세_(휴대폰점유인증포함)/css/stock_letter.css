@@ -877,7 +877,7 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .U-24100 .mid .tab_item .lists .item .menu::after {content: '';display: block;position: absolute;top: 0;right: 1.2em;width: 0.87em;height: 100%;background: no-repeat center / contain url('../img/up-arrow.svg');transform: rotate(180deg);}
 .U-24100 .mid .tab_item .lists .item.on .menu::after {transform: rotate(0deg);}
 .lay_wrap.custom_fortune {font-size: 1.3em;padding-bottom: 0 !important;}
-.lay_wrap.custom_fortune .box {position: relative;padding: 1.2em 0 0;}
+.lay_wrap.custom_fortune .box {position: relative;padding: 1.2em 0;}
 .lay_wrap.custom_fortune .box label {display: block;font-size: 1.2em;}
 .lay_wrap.custom_fortune .box .input {padding: 0.8em 0 0.6em;border: 0;outline: 0;border-bottom: 1px solid;background: transparent;}
 .lay_wrap.custom_fortune .sub_chk {padding: 1.2em 0 0;}
@@ -904,4 +904,4 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .lay_wrap.custom_fortune .bottom.flex .btn:first-child {border-right: 1px solid #eee;color: #000;}
 .lay_wrap.custom_fortune .lay_content {padding-bottom: 0;}
 .lay_wrap.custom_fortune strong.strong, .lay_wrap.custom_fortune .tit_message {font-weight: normal;text-align: center;}
-.lay_wrap.custom_fortune .box.gender, .lay_wrap.custom_fortune .box.blood_type {margin-bottom: 1.2em;}
+.lay_wrap.custom_fortune .box.gender, .lay_wrap.custom_fortune .box.blood_type {/* margin-bottom: 1.2em; */}

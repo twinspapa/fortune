@@ -860,7 +860,7 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .U-24100 .mid .tab .tit {margin-bottom: 1em;font-size: 1.5em;font-weight: bold;color: #000;}
 .U-24100 .mid nav a img {margin: auto 0;width: 40%;}
 .U-24100 .mid nav a span {margin: auto;font-weight: 300;}
-.U-24100 .mid nav a {flex: 1;margin-right: 0.6em;padding: 1.4em 0.8em;color: #000;background: #fff;border-radius: 0.4em;}
+.U-24100 .mid nav a {flex: 1;margin-right: 0.6em;padding: 1.4em 0.8em;color: #000;background: #fff;border-radius: 0.4em; height: 100%;}
 .U-24100 .mid nav a:last-child {margin: 0;}
 .U-24100 .mid .tab {margin-bottom: 1.8em;}
 .U-24100 .mid .tab_item .lists {display: none;}

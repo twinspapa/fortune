@@ -858,22 +858,22 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .U-24100 .top .card .char > p:first-child {font-family: 'Noto Sans HK';}
 .U-24100 .mid {margin-bottom: 2.8em;padding: 0 1.5em;}
 .U-24100 .mid .tab .tit {margin-bottom: 1em;font-size: 1.5em;font-weight: bold;color: #000;}
-.U-24100 .mid nav a img {margin: auto 0;width: 40%;}
-.U-24100 .mid nav a span {margin: auto;font-weight: 300;}
-.U-24100 .mid nav a {flex: 1;margin-right: 0.6em;padding: 1.4em 0.8em;color: #000;background: #fff;border-radius: 0.4em;}
+.U-24100 .mid nav a img {margin: auto 0.2em auto auto;width: 40%;}
+.U-24100 .mid nav a span {margin: auto auto auto 0;font-weight: 300;}
+.U-24100 .mid nav a {flex: 1;margin-right: 0.6em;color: #000;background: #fff;border-radius: 0.4em;height: 5em;}
 .U-24100 .mid nav a:last-child {margin: 0;}
 .U-24100 .mid .tab {margin-bottom: 1.8em;}
 .U-24100 .mid .tab_item .lists {display: none;}
 .U-24100 .mid .tab_item .lists.on {display: block;}
-.U-24100 .mid .tab_item .lists .item .menu {position: relative;margin: 0.4em 0;padding: 1.2em;font-size: 1.3em;font-weight: 300;color: #000;background: #fff;border-radius: 0.4em;}
+.U-24100 .mid .tab_item .lists .item .menu {position: relative;padding: 0 1.2em;font-size: 1.3em;font-weight: 300;color: #000;/* background: #fff; *//* border-radius: 0.4em; */}
 .U-24100 .mid .tab_item .lists .item > .box {padding: 0 1.2em;font-size: 1.3em;background: #fff;border-radius: 0.4em;height: 0;overflow: hidden;}
-.U-24100 .mid .tab_item .lists .item > .box .tit {display: none;margin: 0.8em 0 0.4em;font-size: 1.1em;line-height: 1.5;font-weight: bold;color: #2f4e0d;}
-.U-24100 .mid .tab_item .lists .item > .box .txt {margin: 1.2em 0;line-height: 1.4;letter-spacing: -1.08px;font-weight: 300;}
+.U-24100 .mid .tab_item .lists .item > .box .tit {display: none;margin: 0.8em 0 0.4em;font-size: 0.8em;line-height: 1.5;font-weight: bold;color: #2f4e0d;}
+.U-24100 .mid .tab_item .lists .item > .box .txt {line-height: 1.4;letter-spacing: -1.08px;font-weight: 300;}
 .U-24100 .mid nav a.on {color: #fff;background: #2a2a2a;}
-.U-24100 .mid .tab_item .lists .item.on > .box {max-height: 1000px;height: auto;}
-.U-24100 .mid .tab_item .lists .item {cursor: pointer;}
-.U-24100 .mid .tab_item .lists .item .menu::before {content: '';position: relative;top: -0.15em;display: inline-block;margin-right: 0.23em;width: 0.45em;height: 0.45em;border-radius: 0.45em;background: #444;vertical-align: middle;}
-.U-24100 .mid .tab_item .lists .item.on .menu::before {background: #2f4e0d;}
+.U-24100 .mid .tab_item .lists .item.on > .box {max-height: 1000px;height: auto;margin: 0.8em 0 0;}
+.U-24100 .mid .tab_item .lists .item {cursor: pointer;background: #fff;border-radius: 0.4em;padding: 1.2em 0;margin: 0.4em 0;}
+.U-24100 .mid .tab_item .lists .item .menu::before, .U-24100 .mid .tab_item .lists .item > .box .nativeAD .tit::before {content: '';position: relative;top: -0.15em;display: inline-block;margin-right: 0.23em;width: 0.45em;height: 0.45em;border-radius: 0.45em;background: #444;vertical-align: middle;}
+.U-24100 .mid .tab_item .lists .item.on .menu::before,.U-24100 .mid .tab_item .lists .item > .box .nativeAD .tit::before {background: #2f4e0d;}
 .U-24100 .mid .tab_item .lists .item .menu::after {content: '';display: block;position: absolute;top: 0;right: 1.2em;width: 0.87em;height: 100%;background: no-repeat center / contain url('../img/up-arrow.svg');transform: rotate(180deg);}
 .U-24100 .mid .tab_item .lists .item.on .menu::after {transform: rotate(0deg);}
 .lay_wrap.custom_fortune {font-size: 1.3em;padding-bottom: 0 !important;}
@@ -905,3 +905,38 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .lay_wrap.custom_fortune .lay_content {padding-bottom: 0;}
 .lay_wrap.custom_fortune strong.strong, .lay_wrap.custom_fortune .tit_message {font-weight: normal;text-align: center;}
 .lay_wrap.custom_fortune .box.gender, .lay_wrap.custom_fortune .box.blood_type {/* margin-bottom: 1.2em; */}
+
+.U-24100 .mid .tab_item .lists .item > .box .nativeAD .tit {
+    display: block;
+    font-size: 1em;
+    font-weight: 300;
+    color: #000;
+}
+
+.U-24100 .mid .tab_item .lists .item > .box .nativeAD .link span {
+    font-size: .8em;
+    margin: auto auto auto 0;
+}
+
+.U-24100 .mid .tab_item .lists .item > .box .nativeAD .link strong {
+    font-size: .8em;
+    font-weight: bold;
+    color: red;
+    border: 1px solid red;
+    border-radius: 1em;
+    padding: .2em .4em;
+}
+
+.U-24100 .mid .tab_item .lists .item > .box .nativeAD {
+    margin-top: .8em;
+    border-top: 1px solid #f4f5f9;
+}
+
+.U-24100 .mid .tab_item .lists .item > .box .nativeAD .link {
+    display: flex;
+    margin-top: .8em;
+}
+
+.U-24100 .mid .tab_item .lists .item > .box .nativeAD .link * {
+    display: inline-block;
+}

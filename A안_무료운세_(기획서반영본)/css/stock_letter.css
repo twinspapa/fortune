@@ -941,7 +941,7 @@ button.btn_small,a.btn_small{display:inline-block;width:auto;height:28px;padding
 .U-24100 .mid .tab_item .lists .item > .box .nativeAD .link .icon {display: block;position: absolute;top: 0;right: 0;width: 1.753em;height: 100%;border-radius: 100%;background: #bae18f;}
 
 .U-24100 .mid .tab_item .lists .item > .box .nativeAD .link .txt {
-    display: inline-block;
+    display: block;
     width: 92%;
     white-space: nowrap;
     overflow: hidden;
